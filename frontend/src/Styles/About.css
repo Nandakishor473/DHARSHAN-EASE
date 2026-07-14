@@ -1,0 +1,76 @@
+.about-container{
+    min-height:100vh;
+    background:#f5f5f5;
+    padding:50px 20px;
+}
+
+.about-container h1{
+    text-align:center;
+    color:#8B0000;
+    margin-bottom:40px;
+}
+
+.about-card{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.about-card h2{
+    color:#8B0000;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.about-card p{
+    line-height:1.8;
+    color:#555;
+}
+
+.about-card ul{
+    margin-top:20px;
+    padding-left:25px;
+}
+
+.about-card li{
+    margin-bottom:12px;
+    color:#444;
+}
+/* Tablet */
+@media (max-width:992px){
+
+.about-card{
+    width:90%;
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.about-container{
+    padding:30px 15px;
+}
+
+.about-card{
+    width:100%;
+    padding:25px;
+}
+
+.about-container h1{
+    font-size:32px;
+}
+
+.about-card h2{
+    font-size:24px;
+}
+
+.about-card p,
+.about-card li{
+    font-size:15px;
+}
+
+}

@@ -1,0 +1,159 @@
+### Register User
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name":"Nanda Kishor",
+    "email":"nanda@gmail.com",
+    "password":"123456",
+    "phone":"9876543210"
+}
+
+### Login User
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"nanda@gmail.com",
+    "password":"123456"
+}
+### Register User
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name":"Nanda Kishor",
+    "email":"nanda@gmail.com",
+    "password":"123456",
+    "phone":"9876543210"
+}
+
+### Get All Temples
+
+GET http://localhost:5000/api/temples
+
+
+### Add Temple
+
+POST http://localhost:5000/api/temples
+Authorization: Bearer YOUR_JWT_TOKEN
+Content-Type: application/json
+
+{
+    "templeName":"Tirumala Tirupati Devasthanam",
+    "description":"Famous temple dedicated to Lord Venkateswara.",
+    "location":"Tirupati",
+    "state":"Andhra Pradesh",
+    "district":"Chittoor",
+    "image":"https://example.com/tirumala.jpg",
+    "openingTime":"03:00 AM",
+    "closingTime":"11:30 PM"
+}
+
+### Add Temple
+
+POST http://localhost:5000/api/temples
+Content-Type: application/json
+
+{
+    "templeName":"Tirumala Tirupati Devasthanam",
+    "description":"Famous temple dedicated to Lord Venkateswara.",
+    "location":"Tirupati",
+    "state":"Andhra Pradesh",
+    "district":"Chittoor",
+    "image":"https://example.com/tirumala.jpg",
+    "openingTime":"03:00 AM",
+    "closingTime":"11:30 PM"
+}
+
+### Get All Temples
+
+GET http://localhost:5000/api/temples
+
+
+
+### Create Slot
+
+POST http://localhost:5000/api/slots
+Content-Type: application/json
+
+{
+"temple":"6a45d5d9e569bb5ae9a0242f",
+"slotDate":"2026-07-15",
+"startTime":"08:00 AM",
+"endTime":"09:00 AM",
+"totalSeats":100,
+"availableSeats":100,
+"poojaType":"VIP Darshan"
+}
+
+### Get Temples
+
+GET http://localhost:5000/api/temples
+
+
+
+### Get Temples
+
+GET http://localhost:5000/api/temples
+
+### Get Slots
+
+GET http://localhost:5000/api/slots
+
+### Create Booking
+
+POST http://localhost:5000/api/bookings
+Content-Type: application/json
+
+{
+  "user": "6a454d1eeff9719701d2dfc9",
+  "temple": "6a45d5d9e569bb5ae9a0242f",
+  "slot": "6a45d87f3822b5cce4ccd6af",
+  "numberOfPersons": 2
+}
+
+### Get Slots
+
+GET http://localhost:5000/api/slots
+
+### Get My Bookings
+
+GET http://localhost:5000/api/bookings/user/6a454d1eeff9719701d2dfc9
+
+### Cancel Booking
+
+PUT http://localhost:5000/api/bookings/cancel/6a45fa7fe3277ee61fbd489d
+
+
+### Donate
+
+POST http://localhost:5000/api/donations
+Content-Type: application/json
+
+{
+"user":"6a454d1eeff9719701d2dfc9",
+"temple":"6a45d5d9e569bb5ae9a0242f",
+"amount":500,
+"paymentMethod":"UPI"
+}
+
+
+### Get Donations
+
+GET http://localhost:5000/api/donations
+
+### Admin Dashboard
+
+GET http://localhost:5000/api/admin/dashboard
+
+### Get Slots By Temple
+
+GET http://localhost:5000/api/slots/temple/6a45d5d9e569bb5ae9a0242f
+
+### Get Temple By Id
+
+GET http://localhost:5000/api/temples/6a45d5d9e569bb5ae9a0242f
